@@ -1,6 +1,6 @@
 {
   "name": "@junar/common-scripts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Junar Open Data Platform – Módulos y Librerías JS comunes",
   "repository": {
     "type": "git",
