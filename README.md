@@ -13,5 +13,5 @@ Dentro de `libs`:
 
 Este código esta publicado en NPM, y servido por el mismo médio al proyecto, para las apps `workspace` y `portal`
 
-##Comandos NPM:
-`TODO`
+## Instalar via NPM
+- Comando: `npm install @junar/common-scripts`
