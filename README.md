@@ -1,4 +1,5 @@
-# Módulos y Librerías JS comunes para Junar Open Data Platform
+# Junar Open Data Platform
+## Módulos y Librerías JS comunes
 
 Este repo contiene:
 
@@ -12,5 +13,5 @@ Dentro de `libs`:
 
 Este código esta publicado en NPM, y servido por el mismo médio al proyecto, para las apps `workspace` y `portal`
 
-Comandos NPM:
-# TODO
+##Comandos NPM:
+`TODO`
