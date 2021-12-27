@@ -15,3 +15,9 @@ Este código esta publicado en NPM, y servido por el mismo médio al proyecto, p
 
 ## Instalar via NPM
 - Comando: `npm install @junar/common-scripts`
+
+## Para publicar el paquete
+- en el `package.json` el nombre del paquete debe ser `@junar/XXX`, donde `XXX` será el nombre del paquete alojado en la organización Junar
+- `npm init --scope=junar` (solo la primera vez, sino se ha publicado nunca)
+- Si ya se ha publicado, previo a publicar cambios, se debe cambiar el número de la version del paquete, ej: de `1.0.0` a `1.0.1`
+- `npm publish --access public`
