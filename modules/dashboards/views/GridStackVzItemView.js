@@ -158,7 +158,7 @@ _.extend(Dashboards.views.GridStackVzItemView.prototype, Backbone.Epoxy.View.pro
 						timestamp = dateFormatted + ', ' + timeFormatted;
 						
 						// Render time text with modified at and timestamp
-						$(timeID).find('li > div').html('<span class="has-modified-at">'+timeText+'</span><br><br>'+gettext('VIEWDS-INFO-LASTUPDATE')+'<br><span style="text-transform:capitalize;" class="has-timestamp">'+timestamp+'</span>');
+						$(timeID).find('li > div').html('<span class="has-modified-at">'+timeText+'</span><br><br>'+(Configuration.language == 'es') ? 'Última actualización' : 'Latest update'+'<br><span style="text-transform:capitalize;" class="has-timestamp">'+timestamp+'</span>');
 
 					}
 

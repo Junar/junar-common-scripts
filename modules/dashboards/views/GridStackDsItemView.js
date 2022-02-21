@@ -66,7 +66,7 @@ _.extend(Dashboards.views.GridStackDsItemView.prototype, Backbone.Epoxy.View.pro
                     }
                 } else {
                     this.hideLoading();
-                    addGritter(gettext('APP-ERROR-TEXT'), gettext('APP-REQUEST-ERROR'), true, false);
+                    addGritter('Error', (Configuration.language == 'es') ? 'Ha ocurrido un error procesando su solicitud. Por favor inténtelo nuevamente.' : 'There was a error proccessing your request. Please try again.', true, false);
                 }
             })
             .done((data) => {
@@ -128,7 +128,7 @@ _.extend(Dashboards.views.GridStackDsItemView.prototype, Backbone.Epoxy.View.pro
             timestamp = `${dateFormatted}, ${timeFormatted}`;
 
             // Render time text with modified at and timestamp
-            $(timeID).find('li > div').html(`<span class="has-modified-at">${timeText}</span><br><br>${gettext('VIEWDS-INFO-LASTUPDATE')}<br><span style="text-transform:capitalize;" class="has-timestamp">${timestamp}</span>`);
+            $(timeID).find('li > div').html(`<span class="has-modified-at">${timeText}</span><br><br>${(Configuration.language == 'es') ? 'Última actualización' : 'Latest update'}<br><span style="text-transform:capitalize;" class="has-timestamp">${timestamp}</span>`);
         }
     },
 

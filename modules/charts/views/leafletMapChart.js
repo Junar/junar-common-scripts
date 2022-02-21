@@ -601,7 +601,7 @@ charts.views.LeafletMapChart = charts.views.MapChart.extend({
 
 		var clusterStyleIndex = this.calculateClusterPosition(parseInt(cluster.size), this.mapClustersStyles.length),
 			clusterStyle = this.mapClustersStyles[clusterStyleIndex],
-			clusterTemplate = '<div class="cluster-img" style="background-image:url('+clusterStyle.url+');">'+cluster.size+'</div>';
+			clusterTemplate = '<div class="cluster-img '+clusterStyle.class+'">'+cluster.size+'</div>';
 
 		var markerOptions = {
 			icon: L.divIcon({
@@ -632,7 +632,7 @@ charts.views.LeafletMapChart = charts.views.MapChart.extend({
 		// Iterar para crear los estilos de los clusters
 		for (var i = 0; i < this.mapClustersSizes.length; i++) {
 			this.mapClustersStyles.push({
-				url: 'https://datal-prod-statics.s3.amazonaws.com/core/images/nicemarkers/m' + (i+1) + '.png',
+				class: 'm' + (i+1),
 				height: this.mapClustersSizes[i],
 				width: this.mapClustersSizes[i]
 			});

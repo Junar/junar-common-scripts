@@ -74,11 +74,8 @@ charts.models.Chart = Backbone.Model.extend({
     },
     initialize: function (options) {
 
-        //Se inicializa acá para prevenir error en embed
-        if(window.gettext){
-            if( this.get('message') == ''){
-                this.set('message', gettext("APP-CUSTOMIZE-VISUALIZATION-SELECT-DATA-TEXT"));
-            }
+        if( this.get('message') == ''){
+            this.set('message', (Configuration.language == 'es') ? 'Seleccione los datos que desee representar' : 'Select the data you want to represent');
         }
 
         if ( options && options.impl_details ){
@@ -437,7 +434,7 @@ charts.models.Chart = Backbone.Model.extend({
                     }, 0);
 
                 if (check!=0){
-                    this.set("message",gettext("APP-CUSTOMIZE-VISUALIZATION-VALIDATE-HEADLINES")); //reemplazar por locale
+                    this.set("message",(Configuration.language == 'es') ? 'La cantidad de columnas deben coincidir con la cantidad de encabezados seleccionados' : 'Headlines and columns length must be the equal');
                     valid = false;
                 }
 

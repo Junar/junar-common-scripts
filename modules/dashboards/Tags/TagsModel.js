@@ -7,7 +7,7 @@ Dashboards.models.TagsModel = Backbone.Model.extend({
     validation: {
         tag__name: {
                 maxLength: 40,
-                msg: gettext('VALIDATE-MAXLENGTH-TEXT-1') + ' 40 ' + gettext('VALIDATE-MAXLENGTH-TEXT-2')
+                msg: (Configuration.language == 'es') ? 'El nombre de usuario no debe superar los ' : 'This field supports up to ' + ' 40 ' + (Configuration.language == 'es') ? ' caracteres.' : ' characters.'
             }
     }
 });

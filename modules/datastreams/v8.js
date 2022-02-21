@@ -621,16 +621,16 @@ function renderV8CellTable(str, fType) {
         case "LINK":
             return '<table class="text"><tr><td>' +  str + '</td></tr></table>';
         case "ERROR":
-            return '<table class="null"><tr><td> ' + gettext( "APP-NODATAFOUD-TEXT" ) + '. <span>'
-                + gettext( "APP-PLEASE-TEXT" ) + ' <a id="id_retryButton" title="'
-                + gettext( "APP-TRYAGAIN-TITLE" ) + '">'
-                + gettext( "APP-TRYAGAIN-TEXT" ) + '</a>.</span></td></tr></table>';
+            return '<table class="null"><tr><td> ' + (Configuration.language == 'es') ? 'No se encontraron datos' : 'No data found' + '. <span>'
+                + (Configuration.language == 'es') ? 'Por favor' : 'Please' + ' <a id="id_retryButton" title="'
+                + (Configuration.language == 'es') ? 'Inténtalo Nuevamente' : 'Try Again' + '">'
+                + (Configuration.language == 'es') ? 'inténtalo Nuevamente' : 'try again' + '</a>.</span></td></tr></table>';
         case "CONFIRM-WRITE-DATASET":
-            return '<table class="text"><tr><td> ' + gettext( "APP-WRITE-DATASET-TITLE" )
-                + '. <span><a id="id_retryButton" title="' + gettext("APP-WRITE-DATASET-TEXT") + '">'
-                + gettext("APP-WRITE-DATASET-TEXT") + '</a></span></td></tr></table>';
+            return '<table class="text"><tr><td> ' + (Configuration.language == 'es') ? 'Usted se encuentra por ejecutar un origen que puede cambiar datos.' : 'You are about to run an origin that can affect the data.'
+                + '. <span><a id="id_retryButton" title="' + (Configuration.language == 'es') ? 'Continuar de todas formas' : 'Continue anyway' + '">'
+                + (Configuration.language == 'es') ? 'Continuar de todas formas' : 'Continue anyway' + '</a></span></td></tr></table>';
         case "CONFIRM-WRITE-DATASET-PRO":
-            return '<table class="text"><tr><td> ' + gettext( "APP-WRITE-DATASET-TEXT-PRO" ) + '</td></tr></table>';
+            return '<table class="text"><tr><td> ' + (Configuration.language == 'es') ? 'Las vistas de tipo escritura que pertenecen al entorno de producción no se pueden previsualizar en el espacio de trabajo.' : 'Write-type Data Views that belong to the production environment cannot be previewed in the workspace.' + '</td></tr></table>';
     }
     return ''
 }
