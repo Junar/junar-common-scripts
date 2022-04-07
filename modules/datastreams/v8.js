@@ -560,7 +560,10 @@ function parseV8CellValue (result) {
             var format = result.fDisplayFormat;
             var number = result.fNum;
             if( !_.isUndefined(format) ){    
-                numeral.locale(getV8NumberLocale(format.fLocale));
+                // Solo se necesita configurar el locale != 'us'. Si configuramos 'us' se rompe la libreria numerals, porque esta cargando un locale que no existe (el default es inglés americano, osea 'us').
+                if(format.fLocale != 'us'){
+                    numeral.locale(getV8NumberLocale(format.fLocale));
+                }
                 number = numeral(result.fNum).format(getV8NumberFormat(format.fPattern));
             }
             return String(number)
