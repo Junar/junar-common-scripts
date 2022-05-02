@@ -303,7 +303,7 @@ function getV8NumberFormat(format){
         let number_parts = format.split('.');
 
         // 1) Si tiene decimales "."
-        if( number_parts.length > 0 ){
+        if( number_parts.length > 1 ){
             
             // Decimales - revisamos que haya "#", dado que si hay es "Dígito, cero ausente".
             if( number_parts[1].indexOf('#') != -1){
