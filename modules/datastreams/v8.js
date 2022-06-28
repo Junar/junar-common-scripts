@@ -672,8 +672,12 @@ function renderV8Table(cells, header, colLength, rowLength, fType, trueHeader) {
             }
 
         }
-        for (var i=0; i < rowLength; i++) {
-            answer += '<tbody>' + renderV8Row(cells, colLength, i, false) + '</tbody>'
+        if(rowLength > 0){
+            answer += '<tbody>';
+            for (var i=0; i < rowLength; i++) {
+                answer += renderV8Row(cells, colLength, i, false);
+            }
+            answer += '</tbody>';
         }
         return answer + '</table>'
     }
